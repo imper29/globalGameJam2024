@@ -2,7 +2,6 @@ using UnityEngine;
 
 public class Character : MonoBehaviour
 {
-    [SerializeField] private GameObject obj;
     [SerializeField] private Animator animator;
     [SerializeField] private float speed;
     [SerializeField] private GameObject[] organHolder;
@@ -15,25 +14,25 @@ public class Character : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.W))
         {
-            obj.transform.rotation = new Quaternion();
+            transform.rotation = new Quaternion();
             gameObject.transform.position += Vector3.up * speed * Time.deltaTime;
         }
 
         if (Input.GetKey(KeyCode.A))
         {
-            obj.transform.rotation = new Quaternion(0, 0, 0, 0);
+            transform.rotation = new Quaternion(0, 0, 0, 0);
             gameObject.transform.position += Vector3.left * speed * Time.deltaTime;
         }
 
         if (Input.GetKey(KeyCode.D))
         {
-            obj.transform.rotation = new Quaternion(0, 180, 0, 0);
+            transform.rotation = new Quaternion(0, 180, 0, 0);
             gameObject.transform.position += Vector3.right * speed * Time.deltaTime;
         }
 
         if (Input.GetKey(KeyCode.S))
         {
-            obj.transform.rotation = new Quaternion();
+            transform.rotation = new Quaternion();
             gameObject.transform.position += Vector3.down * speed * Time.deltaTime;
         }
 
