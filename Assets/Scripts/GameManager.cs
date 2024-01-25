@@ -11,14 +11,12 @@ public class GameManager : MonoBehaviour
     [SerializeField] private float m_EasingDuration;
     [SerializeField] private AnimationCurve m_EasingCurve;
 
-    [SerializeField] private TMPro.TextMeshProUGUI m_ScoreRenderer;
-    [SerializeField] private SpriteRenderer m_HealthRenderer;
-    [SerializeField] private Sprite[] m_HealthSprites;
-
     [SerializeField] private Character player;
     [SerializeField] private UIManager uiManager;
     private bool m_IsGameOver;
     public bool isGameOver => m_IsGameOver;
+    private int m_Score;
+    private int score => m_Score;
 
     private void Awake()
     {
@@ -73,8 +71,15 @@ public class GameManager : MonoBehaviour
             uiManager.GameOver();
             return;
         }
+
         player.PlayerMessedUp(m_PlayerMessedUpTimes);
         uiManager.Damage(m_PlayerMessedUpTimes);
+    }
+
+    public void AddScore()
+    {
+        m_Score++;
+        uiManager.UpdateScore(score);
     }
 
     private static GameManager s_Instance;

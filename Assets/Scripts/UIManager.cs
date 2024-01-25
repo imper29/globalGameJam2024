@@ -15,12 +15,12 @@ public class UIManager : MonoBehaviour
     [SerializeField] private Button gameOverButtonYes;
     [SerializeField] private Button gameOverButtonNo;
 
-    private int m_Score;
-    public int Score => m_Score;
+    private int m_score;
+    public int getScore => m_score;
 
     private void Start()
     {
-        scoreTxt.text = m_Score.ToString();
+        scoreTxt.text = m_score.ToString();
         foreach (var image in healthImages)
             image.SetActive(false);
         foreach (var panel in bloodyPanels)
@@ -41,10 +41,10 @@ public class UIManager : MonoBehaviour
         bloodyPanels[messedUpTimes - 1].SetActive(true);
     }
 
-    public void UpdateScore(int addedScore)
+    public void UpdateScore(int newScore)
     {
-        m_Score += addedScore;
-        scoreTxt.text = m_Score.ToString();
+        m_score = newScore;
+        scoreTxt.text = m_score.ToString();
     }
 
     public void GameOver() => gameOverPanel.SetActive(true);

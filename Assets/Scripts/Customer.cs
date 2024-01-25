@@ -26,6 +26,7 @@ public class Customer : MonoBehaviour
         else
         {
             //Gave organ customer did want.
+            GameManager.Instance.AddScore();
             m_WantedOrgans &= ~mask;
             if (m_WantedOrgans == 0)
             {
