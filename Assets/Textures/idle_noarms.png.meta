@@ -106,6 +106,19 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -117,8 +130,8 @@ TextureImporter:
         y: 12
         width: 21
         height: 48
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -131,6 +144,132 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
+      name: idle_noarms_3
+      rect:
+        serializedVersion: 2
+        x: 123
+        y: 12
+        width: 21
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3f5470ab650bdf4b8c98e4d805d2cc2
+      internalID: 715400818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idle_noarms_6
+      rect:
+        serializedVersion: 2
+        x: 233
+        y: 12
+        width: 21
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a013fb88624bf44cbfc5899a69b4c9b
+      internalID: -1763005882
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idle_noarms_9
+      rect:
+        serializedVersion: 2
+        x: 343
+        y: 12
+        width: 21
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa2de3f313af4d64287d3610053cfdba
+      internalID: 921048353
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idle_noarms_12
+      rect:
+        serializedVersion: 2
+        x: 453
+        y: 12
+        width: 21
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cfae68474ad2e15479fa4e54d0d36d07
+      internalID: 1818410974
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idle_noarms_15
+      rect:
+        serializedVersion: 2
+        x: 563
+        y: 12
+        width: 21
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f80017397230664485cd7fac3e88e35
+      internalID: 2082333386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idle_noarms_18
+      rect:
+        serializedVersion: 2
+        x: 673
+        y: 12
+        width: 21
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24eedfa5eae93514ba0c841206599953
+      internalID: 785674339
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
       name: idle_noarms_1
       rect:
         serializedVersion: 2
@@ -138,14 +277,14 @@ TextureImporter:
         y: 12
         width: 21
         height: 48
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2d0951cb8462b7840acba1009aa05ad6
+      spriteID: 72e1cb042e09e834f9a71c053a32e09c
       internalID: -1431728709
       vertices: []
       indices: 
@@ -159,36 +298,15 @@ TextureImporter:
         y: 12
         width: 21
         height: 48
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fd8d7cbb9e4cbbb4dad8cc27798d0f2f
+      spriteID: db6cc8eb72d0b614eac1fe91cf7120da
       internalID: -1491790140
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: idle_noarms_3
-      rect:
-        serializedVersion: 2
-        x: 123
-        y: 12
-        width: 21
-        height: 48
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e3f5470ab650bdf4b8c98e4d805d2cc2
-      internalID: 715400818
       vertices: []
       indices: 
       edges: []
@@ -201,14 +319,14 @@ TextureImporter:
         y: 12
         width: 21
         height: 48
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8e2687f79d33d6945a96c85a5fddf87d
+      spriteID: 0c7d9f09cdce20e46be8169606aa62f3
       internalID: -816999315
       vertices: []
       indices: 
@@ -222,36 +340,15 @@ TextureImporter:
         y: 12
         width: 21
         height: 48
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 479b89fba1062c24888f5243a57d8d25
+      spriteID: 52743b568cb54b44bb4d93c0e911e9de
       internalID: 718797004
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: idle_noarms_6
-      rect:
-        serializedVersion: 2
-        x: 233
-        y: 12
-        width: 21
-        height: 48
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8a013fb88624bf44cbfc5899a69b4c9b
-      internalID: -1763005882
       vertices: []
       indices: 
       edges: []
@@ -264,14 +361,14 @@ TextureImporter:
         y: 12
         width: 21
         height: 48
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4cd85b216a315824493468b322f54b1f
+      spriteID: a2b121289aada1543aab001ee47407d4
       internalID: -1528360828
       vertices: []
       indices: 
@@ -285,36 +382,15 @@ TextureImporter:
         y: 12
         width: 21
         height: 48
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b8f60e42bbf339345a0ef8fa2cf738d7
+      spriteID: f705fb7730d49d34db68a286cf85179a
       internalID: 471433551
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: idle_noarms_9
-      rect:
-        serializedVersion: 2
-        x: 343
-        y: 12
-        width: 21
-        height: 48
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: aa2de3f313af4d64287d3610053cfdba
-      internalID: 921048353
       vertices: []
       indices: 
       edges: []
@@ -327,14 +403,14 @@ TextureImporter:
         y: 12
         width: 21
         height: 48
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 941e5a0edc93d8b4dbda7b6e7334aa76
+      spriteID: 5011ab5317e4e4d4d99c580fa0a2e9c3
       internalID: 1124176982
       vertices: []
       indices: 
@@ -348,36 +424,15 @@ TextureImporter:
         y: 12
         width: 21
         height: 48
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 71bec698c0d48e84993b6d31209bfe3a
+      spriteID: 9c7b0d59027e05d4096da10e5112b4dc
       internalID: -2057995016
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: idle_noarms_12
-      rect:
-        serializedVersion: 2
-        x: 453
-        y: 12
-        width: 21
-        height: 48
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: cfae68474ad2e15479fa4e54d0d36d07
-      internalID: 1818410974
       vertices: []
       indices: 
       edges: []
@@ -390,14 +445,14 @@ TextureImporter:
         y: 12
         width: 21
         height: 48
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9520f180ccf33264b982ee9bef206a1e
+      spriteID: 140a13fd40e7e604a979e017c729280f
       internalID: 1009053608
       vertices: []
       indices: 
@@ -411,36 +466,15 @@ TextureImporter:
         y: 12
         width: 21
         height: 48
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dfe9264bcaeeb314b9038a8fcc72c0ac
+      spriteID: 0f64c60816d2224488ffb7f98f326ca9
       internalID: 1887679662
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: idle_noarms_15
-      rect:
-        serializedVersion: 2
-        x: 563
-        y: 12
-        width: 21
-        height: 48
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7f80017397230664485cd7fac3e88e35
-      internalID: 2082333386
       vertices: []
       indices: 
       edges: []
@@ -453,14 +487,14 @@ TextureImporter:
         y: 12
         width: 21
         height: 48
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3c10832f2dfff5c4a829d56aa24a4dbd
+      spriteID: 14de29b028e189f4e9cd27d8b1eab89a
       internalID: 578307413
       vertices: []
       indices: 
@@ -474,36 +508,15 @@ TextureImporter:
         y: 12
         width: 21
         height: 48
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 77d76553ed62cf44eb443c05f30626b5
+      spriteID: d802c7253def0ab4f8527a27d5d016e2
       internalID: -335720932
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: idle_noarms_18
-      rect:
-        serializedVersion: 2
-        x: 673
-        y: 12
-        width: 21
-        height: 48
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 24eedfa5eae93514ba0c841206599953
-      internalID: 785674339
       vertices: []
       indices: 
       edges: []
@@ -516,14 +529,14 @@ TextureImporter:
         y: 12
         width: 21
         height: 48
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0db8970954da5d145a3aeedb14a23793
+      spriteID: 5a667df81fc4bd6448ca6572e097e566
       internalID: 54362405
       vertices: []
       indices: 
@@ -537,14 +550,14 @@ TextureImporter:
         y: 12
         width: 21
         height: 48
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c2e429bb0bf1ce742850850bd5b8fa62
+      spriteID: 2399c2b1d59926a42b75164062e1ea51
       internalID: 1282155355
       vertices: []
       indices: 
