@@ -18,24 +18,44 @@ public class Character : MonoBehaviour
         {
             offset += Vector3.up * speed * Time.deltaTime;
             transform.rotation = new Quaternion();
+            animator.SetBool("Up", true);
+            animator.SetBool("Down", false);
+            animator.SetBool("Side", false);
         }
 
         if (Input.GetKey(KeyCode.A))
         {
             offset += Vector3.left * speed * Time.deltaTime;
             transform.rotation = new Quaternion(0, 0, 0, 0);
+            animator.SetBool("Up", false);
+            animator.SetBool("Down", false);
+            animator.SetBool("Side", true);
         }
 
         if (Input.GetKey(KeyCode.D))
         {
             offset += Vector3.right * speed * Time.deltaTime;
             transform.rotation = new Quaternion(0, 180, 0, 0);
+            animator.SetBool("Up", false);
+            animator.SetBool("Down", false);
+            animator.SetBool("Side", true);
         }
 
         if (Input.GetKey(KeyCode.S))
         {
             offset += Vector3.down * speed * Time.deltaTime;
             transform.rotation = new Quaternion();
+            animator.SetBool("Up", true);
+            animator.SetBool("Down", true);
+            animator.SetBool("Side", false);
+        }
+
+        if (Input.GetKeyUp(KeyCode.A) || Input.GetKeyUp(KeyCode.D) || Input.GetKeyUp(KeyCode.W) ||
+            Input.GetKeyUp(KeyCode.S))
+        {
+            animator.SetBool("Up", false);
+            animator.SetBool("Down", false);
+            animator.SetBool("Side", false);
         }
 
         Rigidbody2D.MovePosition(transform.position + offset);
