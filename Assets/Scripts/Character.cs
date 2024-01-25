@@ -22,51 +22,53 @@ public class Character : MonoBehaviour
         {
             _offset += Vector3.up;
             transform.localScale = new(1, 1, 1);
+            animator.SetBool("Up", true);
+            animator.SetBool("Down", false);
+            animator.SetBool("Side", false);
         }
+
         if (Input.GetKey(KeyCode.A))
         {
-            offset += Vector3.left * speed * Time.deltaTime;
-            transform.rotation = new Quaternion(0, 0, 0, 0);
+            _offset += Vector3.left;
+            transform.localScale = new(1, 1, 1);
             animator.SetBool("Up", false);
             animator.SetBool("Down", false);
             animator.SetBool("Side", true);
-            _offset += Vector3.left;
-            transform.localScale = new(-1, 1, 1);
         }
+
         if (Input.GetKey(KeyCode.D))
         {
-            offset += Vector3.right * speed * Time.deltaTime;
-            transform.rotation = new Quaternion(0, 180, 0, 0);
+            _offset += Vector3.right;
+            transform.localScale = new(-1, 1, 1);
             animator.SetBool("Up", false);
             animator.SetBool("Down", false);
             animator.SetBool("Side", true);
-            _offset += Vector3.right;
-            transform.localScale = new(1, 1, 1);
         }
+
         if (Input.GetKey(KeyCode.S))
         {
-            offset += Vector3.down * speed * Time.deltaTime;
-            transform.rotation = new Quaternion();
-            animator.SetBool("Up", true);
+            _offset += Vector3.down;
+            transform.localScale = new(1, 1, 1);
+            animator.SetBool("Up", false);
             animator.SetBool("Down", true);
             animator.SetBool("Side", false);
         }
 
-        if (Input.GetKeyUp(KeyCode.A) || Input.GetKeyUp(KeyCode.D) || Input.GetKeyUp(KeyCode.W) ||
-            Input.GetKeyUp(KeyCode.S))
+        if (Input.GetKeyUp(KeyCode.A) || Input.GetKeyUp(KeyCode.D) || Input.GetKeyUp(KeyCode.S) ||
+            Input.GetKeyUp(KeyCode.W))
         {
             animator.SetBool("Up", false);
             animator.SetBool("Down", false);
             animator.SetBool("Side", false);
-            _offset += Vector3.down;
-            transform.localScale = new(1, 1, 1);
         }
+
         if (Input.GetKeyDown(KeyCode.Space))
         {
             PickUpOrgan();
             TransplantOrgan();
         }
     }
+
     private void FixedUpdate()
     {
         Rigidbody2D.MovePosition(transform.position + _offset * GetSpeed() * Time.fixedDeltaTime);
@@ -81,10 +83,11 @@ public class Character : MonoBehaviour
     private void PickUpOrgan()
     {
         var charPos = transform.position;
-        var ray = Physics2D.BoxCastAll(new Vector2(charPos.x, charPos.y /* - 2.9f*/), new Vector2(1.0f, pickingRange), 0,
+        var ray = Physics2D.BoxCastAll(new Vector2(charPos.x, charPos.y /* - 2.9f*/), new Vector2(1.0f, pickingRange),
+            0,
             Vector2.down);
-        
-        
+
+
         foreach (var hit in ray.OrderBy(r => Vector2.Distance(r.transform.position, transform.position)))
         {
             if (hit.transform.gameObject.GetComponent<Organ>() == null)
@@ -146,6 +149,10 @@ public class Character : MonoBehaviour
     private void PlayerMessedUp()
     {
         _messedUp++;
+        if(_messedUp == 1)
+            animator.SetBool("Transition1Done",true);
+        if(_messedUp == 2)
+            animator.SetBool("Transition2Done",true);
         if (_messedUp >= 3)
         {
             //GameOver
