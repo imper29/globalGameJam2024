@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class Customer : MonoBehaviour
@@ -10,6 +11,7 @@ public class Customer : MonoBehaviour
         m_WantedOrgans = order;
         m_WantedOrgansOriginal = order;
         RefreshSprites();
+        
     }
     public void ImplantOrgan(Organ organ)
     {
@@ -18,6 +20,7 @@ public class Customer : MonoBehaviour
         {
             //Gave organ customer did not want.
             FindObjectOfType<OrganManager>().AddPending(mask & (~m_WantedOrgans));
+            GameManager.Instance.PlayerMessedUp();
             Debug.Log("Customer angry!");
         }
         else
@@ -81,6 +84,14 @@ public class Customer : MonoBehaviour
             m_BubbleRendererOrganR.enabled = true;
         }
 
+    }
+
+    private void OnDestroy()
+    {
+        if (m_WantedOrgans != 0)
+        {
+            GameManager.Instance.PlayerMessedUp();
+        }
     }
 
     [SerializeField]

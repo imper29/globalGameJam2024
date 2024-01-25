@@ -17,8 +17,17 @@ public class Character : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.L))
-            PlayerMessedUp();
+        if (GameManager.Instance.isGameOver)
+        {
+            _offset = new Vector3();
+            animator.SetBool("Up", false);
+            animator.SetBool("Down", false);
+            animator.SetBool("Side", false);
+            return;
+        }
+            
+        // if (Input.GetKeyDown(KeyCode.L))
+        //     PlayerMessedUp();
         _offset = Vector3.zero;
         if (Input.GetKey(KeyCode.W))
         {
@@ -148,17 +157,13 @@ public class Character : MonoBehaviour
         }
     }
 
-    private void PlayerMessedUp()
+    public void PlayerMessedUp(int messedUpTimes)
     {
-        _messedUp++;
+        _messedUp = messedUpTimes;
         if(_messedUp == 1)
             animator.SetBool("Transition1Done",true);
         if(_messedUp == 2)
             animator.SetBool("Transition2Done",true);
-        if (_messedUp >= 3)
-        {
-            //GameOver
-        }
         animator.SetInteger("Stage", _messedUp);
     }
 
