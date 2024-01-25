@@ -3,7 +3,9 @@ using UnityEngine;
 public class CustomerManager : MonoBehaviour
 {
     [SerializeField]
-    private Customer[] m_Prefabs;
+    private Customer m_Prefab;
+    [SerializeField]
+    private CustomerOrderPool m_OrderPool;
 
     [SerializeField]
     private float m_SecondsPerCustomerMin;
@@ -19,7 +21,9 @@ public class CustomerManager : MonoBehaviour
     }
     private Customer TrySpawnCustomer()
     {
-        return Instantiate(m_Prefabs[Random.Range(0, m_Prefabs.Length)], transform.position, Quaternion.identity, transform);
+        Customer customer = Instantiate(m_Prefab, transform.position, Quaternion.identity, transform);
+        customer.Initialize(m_OrderPool.GetRandomOrder(GameManager.Instance.GetDifficulty()).Organs);
+        return customer;
     }
 
     private void Awake()

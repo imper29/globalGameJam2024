@@ -11,9 +11,12 @@ public enum OrganMask
     Lungs = 1 << 7,
     Stomach = 1 << 8,
     Ear = 1 << 9,
+    Internal = Liver | Heart | Kidney | Lungs | Stomach,
+    External = Brain | Arm | Foot | Eye
 }
 public enum OrganType
 {
+    None = -1,
     Brain = 0,
     Foot = 1,
     Arm = 2,
