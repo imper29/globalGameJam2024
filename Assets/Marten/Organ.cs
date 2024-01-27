@@ -1,6 +1,5 @@
 using UnityEngine;
 
-[CreateAssetMenu]
 public class Organ : MonoBehaviour
 {
     public OrganType Type => m_Type;

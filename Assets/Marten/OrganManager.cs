@@ -14,15 +14,15 @@ public class OrganManager : MonoBehaviour
 
     private int[] m_OrgansPending = new int[(int)OrganType.COUNT];
     
-    public void AddPending(OrganType wantedOrgan)
+    public void AddPending(OrganType wantedOrgan, int count = 1)
     {
-        m_OrgansPending[(int)wantedOrgan]++;
+        m_OrgansPending[(int)wantedOrgan] += count;
     }
-    public void AddPending(OrganMask wantedOrgans)
+    public void AddPending(OrganMask wantedOrgans, int count = 1)
     {
         for (int i = 0; i < m_OrgansPending.Length; ++i)
             if ((wantedOrgans & (OrganMask)(1 << i)) != 0)
-                m_OrgansPending[i]++;
+                m_OrgansPending[i] += count;
     }
     private float GetNextSpawnTime()
     {

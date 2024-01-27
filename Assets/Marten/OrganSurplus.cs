@@ -10,8 +10,7 @@ public class OrganSurplus : MonoBehaviour
     {
         OrganManager organManager = FindObjectOfType<OrganManager>();
         for (int i = 0; i < m_SurplusOrgans.Length; ++i)
-            for (int j = 0; j < m_SurplusOrgans[i].count; ++j)
-                organManager.AddPending(m_SurplusOrgans[i].organ);
+            organManager.AddPending(m_SurplusOrgans[i].organ, m_SurplusOrgans[i].count);
     }
 
     [Serializable]
