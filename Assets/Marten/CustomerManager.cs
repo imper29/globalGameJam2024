@@ -15,11 +15,11 @@ public class CustomerManager : MonoBehaviour
     
     private float GetNextSpawnTime()
     {
-        return Time.time + Mathf.Lerp(m_SecondsPerCustomerMin, m_SecondsPerCustomerMax, GameManager.Instance.GetDifficulty());
+        return Time.time + Mathf.Lerp(m_SecondsPerCustomerMin, m_SecondsPerCustomerMax, 1.0f - GameManager.Instance.GetDifficulty());
     }
     private Customer TrySpawnCustomer()
     {
-        return Instantiate(m_Prefabs[Random.Range(0, m_Prefabs.Length)]);
+        return Instantiate(m_Prefabs[Random.Range(0, m_Prefabs.Length)], transform.position, Quaternion.identity, transform);
     }
 
     private void Awake()

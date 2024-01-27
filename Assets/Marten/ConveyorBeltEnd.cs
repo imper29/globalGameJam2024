@@ -20,6 +20,7 @@ public class ConveyorBeltEnd : MonoBehaviour
         if (customer)
         {
             m_OrganManager.AddPending(customer.WantedOrgans, -1);
+            Destroy(collision.gameObject);
         }
     }
 }
