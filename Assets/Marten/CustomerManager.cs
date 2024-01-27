@@ -28,7 +28,7 @@ public class CustomerManager : MonoBehaviour
     }
     private void Update()
     {
-        if (m_CustomerTimeNext >= Time.time)
+        if (m_CustomerTimeNext <= Time.time)
         {
             m_CustomerTimeNext = GetNextSpawnTime();
             var customer = TrySpawnCustomer();
