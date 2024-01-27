@@ -8,9 +8,13 @@ public class OrganManager : MonoBehaviour
     [SerializeField]
     private float m_OrganSpawnTime = 1.0f;
     [SerializeField]
-    private float m_OrganSpawnTimeCooldownMin = 0.3f;
+    private float m_OrganSpawnTimeCooldownMin = 0.0f;
     [SerializeField]
     private float m_OrganSpawnTimeCooldownMax = 1.0f;
+    [SerializeField]
+    private float m_OrganSpawnTimeCooldownRandMin = 0.1f;
+    [SerializeField]
+    private float m_OrganSpawnTimeCooldownRandMax = 0.3f;
 
     private int[] m_OrgansPending = new int[(int)OrganType.COUNT];
     
@@ -26,7 +30,9 @@ public class OrganManager : MonoBehaviour
     }
     private float GetNextSpawnTime()
     {
-        return Time.time + Random.Range(m_OrganSpawnTimeCooldownMin, m_OrganSpawnTimeCooldownMax) * (1.0f - GameManager.Instance.GetDifficulty());
+        return Time.time
+            + Random.Range(m_OrganSpawnTimeCooldownMin, m_OrganSpawnTimeCooldownMax) * (1.0f - GameManager.Instance.GetDifficulty())
+            + Random.Range(m_OrganSpawnTimeCooldownRandMin, m_OrganSpawnTimeCooldownRandMax);
     }
     private Organ TrySpawnOrgan()
     {
@@ -34,7 +40,7 @@ public class OrganManager : MonoBehaviour
         for (int i = 0; i < m_Prefabs.Length; ++i)
         {
             var type = (int)m_Prefabs[i].Type;
-            if (m_OrgansPending[type] != 0)
+            if (m_OrgansPending[type] > 0)
                 options.Add(m_Prefabs[i]);
         }
         if (options.Count == 0)

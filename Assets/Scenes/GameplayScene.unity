@@ -154,7 +154,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_SpeedMin: 1
-  m_SpeedMax: 10
+  m_SpeedMax: 3
   m_Direction: {x: -1, y: 0}
 --- !u!61 &183349337
 BoxCollider2D:
@@ -294,7 +294,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_SpeedMin: 1
-  m_SpeedMax: 10
+  m_SpeedMax: 3
   m_Direction: {x: 1, y: 0}
 --- !u!4 &192907470
 Transform:
@@ -537,9 +537,11 @@ MonoBehaviour:
   m_Prefabs:
   - {fileID: 652923216212101873, guid: 4a1192c5c666dba478c0eb49cd083035, type: 3}
   - {fileID: 652923216212101873, guid: f0e06a124fede914eaa5cead1e9c38f7, type: 3}
-  m_OrganSpawnTime: 0
-  m_OrganSpawnTimeCooldownMin: 0.3
+  m_OrganSpawnTime: 1
+  m_OrganSpawnTimeCooldownMin: 0
   m_OrganSpawnTimeCooldownMax: 1
+  m_OrganSpawnTimeCooldownRandMin: 0.1
+  m_OrganSpawnTimeCooldownRandMax: 0.3
 --- !u!4 &450261643
 Transform:
   m_ObjectHideFlags: 0
@@ -677,7 +679,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_CurveStartTime: 0
-  m_CurveEndTime: 100
+  m_CurveEndTime: 1
   m_DifficultyCurve:
     serializedVersion: 2
     m_Curve:
@@ -1251,8 +1253,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Prefabs:
   - {fileID: -9121751823017951541, guid: 8bfb0765d97fb534283bc081f7caaa3c, type: 3}
-  m_SecondsPerCustomerMin: 5
-  m_SecondsPerCustomerMax: 10
+  m_SecondsPerCustomerMin: 0.5
+  m_SecondsPerCustomerMax: 7
 --- !u!1 &1037303914
 GameObject:
   m_ObjectHideFlags: 0
