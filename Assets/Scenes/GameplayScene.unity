@@ -643,9 +643,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_SurplusOrgans:
   - organ: 0
-    count: 3
+    count: 1
+  - organ: 1
+    count: 1
+  - organ: 2
+    count: 1
   - organ: 3
-    count: 5
+    count: 1
+  - organ: 4
+    count: 1
+  - organ: 5
+    count: 1
+  - organ: 6
+    count: 1
+  - organ: 7
+    count: 1
+  - organ: 8
+    count: 1
+  - organ: 9
+    count: 1
 --- !u!114 &450261642
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -659,13 +675,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Prefabs:
-  - {fileID: 652923216212101873, guid: 4a1192c5c666dba478c0eb49cd083035, type: 3}
-  - {fileID: 652923216212101873, guid: f0e06a124fede914eaa5cead1e9c38f7, type: 3}
+  - {fileID: 2264813623814112097, guid: 02fcd72e513319c488e3fcf5f27d2c82, type: 3}
+  - {fileID: 7827615338373500163, guid: bc00333aafcfada4baa81a8fa013cbcd, type: 3}
+  - {fileID: 7916062365041077470, guid: 9180c88ae625b6c4eb1812b59d015fe8, type: 3}
+  - {fileID: 3798732743067378280, guid: bd909d16706855149ae323c07960dd21, type: 3}
+  - {fileID: 3289061118676214837, guid: 518e0ea8810bc154eb193caf72852c1f, type: 3}
+  - {fileID: 5837303685534820642, guid: bd423f1616d59bf4e804659f849d4db3, type: 3}
+  - {fileID: 4407958877582263200, guid: ba94e318ef962e449b7b9f49795b19c3, type: 3}
+  - {fileID: 7592693929480027021, guid: eb9616961ff596a489d4b3c1950d804d, type: 3}
+  - {fileID: 332873411030132568, guid: a7382f6e1d41f89409cb408796979720, type: 3}
+  - {fileID: 1853578362594627365, guid: a670a7bfb1de8a54a90ee55276e1be33, type: 3}
   m_OrganSpawnTime: 1
   m_OrganSpawnTimeCooldownMin: 0
   m_OrganSpawnTimeCooldownMax: 0.4
-  m_OrganSpawnTimeCooldownRandMin: 0.1
-  m_OrganSpawnTimeCooldownRandMax: 0.3
+  m_OrganSpawnTimeCooldownRandMin: 0.25
+  m_OrganSpawnTimeCooldownRandMax: 0.4
 --- !u!4 &450261643
 Transform:
   m_ObjectHideFlags: 0
