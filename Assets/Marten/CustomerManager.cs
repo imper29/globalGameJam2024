@@ -6,8 +6,6 @@ public class CustomerManager : MonoBehaviour
     private float m_CustomersPerSecond;
     [SerializeField]
     private Customer[] m_Prefabs;
-    [SerializeField]
-    private OrganManager m_OrganManager;
 
     [SerializeField]
     private float m_SecondsPerCustomerMin;
@@ -15,6 +13,7 @@ public class CustomerManager : MonoBehaviour
     private float m_SecondsPerCustomerMax;
 
     private float m_CustomerTimeNext;
+    private OrganManager m_OrganManager;
     
     private float GetNextSpawnTime()
     {
@@ -25,6 +24,10 @@ public class CustomerManager : MonoBehaviour
         return Instantiate(m_Prefabs[Random.Range(0, m_Prefabs.Length)]);
     }
 
+    private void Awake()
+    {
+        m_OrganManager = FindObjectOfType<OrganManager>();
+    }
     private void Update()
     {
         if (m_CustomerTimeNext >= Time.time)
