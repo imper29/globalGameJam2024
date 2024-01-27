@@ -20,6 +20,7 @@ public class GameManager : MonoBehaviour
     {
         s_Instance = this;
         m_StartTime = Time.time;
+        m_EasingStartTime = Time.time - m_EasingDuration;
     }
 
     /// <summary>
@@ -38,9 +39,16 @@ public class GameManager : MonoBehaviour
     {
         float difficultyEvalPoint = Mathf.Clamp01(Mathf.InverseLerp(m_DifficultyStartTime, m_DifficultyEndTime, Time.time - m_StartTime));
         float difficulty = m_DifficultyCurve.Evaluate(difficultyEvalPoint);
+        return difficulty - GetEasing();
+    }
+    /// <summary>
+    /// Returns the current easing value between zero and one inclusive.
+    /// </summary>
+    /// <returns>The current easing value.</returns>
+    public float GetEasing()
+    {
         float easingEvalPoint = Mathf.Clamp01(Mathf.InverseLerp(m_EasingStartTime, m_EasingStartTime + m_EasingDuration, Time.time));
-        float easing = m_EasingCurve.Evaluate(easingEvalPoint);
-        return difficulty - easing;
+        return m_EasingCurve.Evaluate(easingEvalPoint);
     }
 
     private static GameManager s_Instance;
