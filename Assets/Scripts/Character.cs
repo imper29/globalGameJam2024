@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class Character : MonoBehaviour
 {
-    [SerializeField] private GameObject obj;
+    [SerializeField] private Rigidbody2D Rigidbody2D;
     [SerializeField] private Animator animator;
     [SerializeField] private float speed;
     [SerializeField] private GameObject[] organHolder;
@@ -13,30 +13,32 @@ public class Character : MonoBehaviour
 
     void Update()
     {
+        var offset = new Vector3(0, 0, 0);
         if (Input.GetKey(KeyCode.W))
         {
-            obj.transform.rotation = new Quaternion();
-            gameObject.transform.position += Vector3.up * speed * Time.deltaTime;
+            offset += Vector3.up * speed * Time.deltaTime;
+            transform.rotation = new Quaternion();
         }
 
         if (Input.GetKey(KeyCode.A))
         {
-            obj.transform.rotation = new Quaternion(0, 0, 0, 0);
-            gameObject.transform.position += Vector3.left * speed * Time.deltaTime;
+            offset += Vector3.left * speed * Time.deltaTime;
+            transform.rotation = new Quaternion(0, 0, 0, 0);
         }
 
         if (Input.GetKey(KeyCode.D))
         {
-            obj.transform.rotation = new Quaternion(0, 180, 0, 0);
-            gameObject.transform.position += Vector3.right * speed * Time.deltaTime;
+            offset += Vector3.right * speed * Time.deltaTime;
+            transform.rotation = new Quaternion(0, 180, 0, 0);
         }
 
         if (Input.GetKey(KeyCode.S))
         {
-            obj.transform.rotation = new Quaternion();
-            gameObject.transform.position += Vector3.down * speed * Time.deltaTime;
+            offset += Vector3.down * speed * Time.deltaTime;
+            transform.rotation = new Quaternion();
         }
 
+        Rigidbody2D.MovePosition(transform.position + offset);
         if (Input.GetKeyDown(KeyCode.Space))
         {
             PickUpOrgan();
