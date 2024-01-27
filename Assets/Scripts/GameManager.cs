@@ -2,11 +2,19 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    private static float startTime;
+    public static GameManager Instance => s_Instance;
+
+    [SerializeField]
+    private float m_CurveStartTime;
+    [SerializeField]
+    private float m_CurveEndTime;
+    [SerializeField]
+    private AnimationCurve m_DifficultyCurve;
 
     private void Awake()
     {
-        startTime = Time.time;
+        s_Instance = this;
+        m_StartTime = Time.time;
     }
 
     /// <summary>
@@ -14,9 +22,13 @@ public class GameManager : MonoBehaviour
     /// </summary>
     /// <remarks>This will be reimplemented later so that difficulty scales more slowly and is reduced when the character loses organs.</remarks>
     /// <returns>The current difficulty.</returns>
-    public static float GetDifficulty()
+    public float GetDifficulty()
     {
-        //Reaches maximum difficulty in 3 minutes.
-        return Mathf.Clamp01((Time.time - startTime) / 300.0f);
+        float evalPoint = Mathf.Clamp01(Mathf.InverseLerp(m_CurveStartTime, m_CurveEndTime, Time.time - m_StartTime));
+        float difficulty = s_Instance.m_DifficultyCurve.Evaluate(evalPoint);
+        return difficulty;
     }
+
+    private static GameManager s_Instance;
+    private static float m_StartTime;
 }

@@ -16,5 +16,10 @@ public class ConveyorBeltEnd : MonoBehaviour
             m_OrganManager.AddPending(organ.Type);
             Destroy(collision.gameObject);
         }
+        var customer = collision.gameObject.GetComponent<Customer>();
+        if (customer)
+        {
+            m_OrganManager.AddPending(customer.WantedOrgans, -1);
+        }
     }
 }

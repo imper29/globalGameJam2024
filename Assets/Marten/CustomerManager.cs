@@ -3,8 +3,6 @@ using UnityEngine;
 public class CustomerManager : MonoBehaviour
 {
     [SerializeField]
-    private float m_CustomersPerSecond;
-    [SerializeField]
     private Customer[] m_Prefabs;
 
     [SerializeField]
@@ -17,7 +15,7 @@ public class CustomerManager : MonoBehaviour
     
     private float GetNextSpawnTime()
     {
-        return Time.time + Mathf.Lerp(m_SecondsPerCustomerMin, m_SecondsPerCustomerMax, GameManager.GetDifficulty());
+        return Time.time + Mathf.Lerp(m_SecondsPerCustomerMin, m_SecondsPerCustomerMax, GameManager.Instance.GetDifficulty());
     }
     private Customer TrySpawnCustomer()
     {
@@ -33,7 +31,9 @@ public class CustomerManager : MonoBehaviour
         if (m_CustomerTimeNext >= Time.time)
         {
             m_CustomerTimeNext = GetNextSpawnTime();
-            TrySpawnCustomer();
+            var customer = TrySpawnCustomer();
+            if (customer)
+                m_OrganManager.AddPending(customer.WantedOrgans);
         }
     }
 }

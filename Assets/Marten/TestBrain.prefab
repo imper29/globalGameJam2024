@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4611951126203534941}
   - component: {fileID: 4174051466790452109}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Square
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -72,7 +72,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 1, g: 0, b: 0.9744201, a: 1}
   m_FlipX: 0
@@ -96,7 +96,7 @@ GameObject:
   - component: {fileID: 652923216212101873}
   - component: {fileID: 8253590418540093856}
   - component: {fileID: 7844163491498660731}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: TestBrain
   m_TagString: Untagged
   m_Icon: {fileID: 0}

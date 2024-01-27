@@ -19,6 +19,6 @@ public class ConveyorBelt : MonoBehaviour
 
     float GetSpeed()
     {
-        return Mathf.Lerp(m_SpeedMin, m_SpeedMax, GameManager.GetDifficulty());
+        return Mathf.Lerp(m_SpeedMin, m_SpeedMax, GameManager.Instance.GetDifficulty());
     }
 }

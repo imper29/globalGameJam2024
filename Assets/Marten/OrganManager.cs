@@ -26,7 +26,7 @@ public class OrganManager : MonoBehaviour
     }
     private float GetNextSpawnTime()
     {
-        return Time.time + Random.Range(m_OrganSpawnTimeCooldownMin, m_OrganSpawnTimeCooldownMax) * (1.0f - GameManager.GetDifficulty());
+        return Time.time + Random.Range(m_OrganSpawnTimeCooldownMin, m_OrganSpawnTimeCooldownMax) * (1.0f - GameManager.Instance.GetDifficulty());
     }
     private Organ TrySpawnOrgan()
     {
