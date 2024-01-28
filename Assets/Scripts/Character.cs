@@ -25,16 +25,39 @@ public class Character : MonoBehaviour
         }
         if (Input.GetKey(KeyCode.A))
         {
+            offset += Vector3.left * speed * Time.deltaTime;
+            transform.rotation = new Quaternion(0, 0, 0, 0);
+            animator.SetBool("Up", false);
+            animator.SetBool("Down", false);
+            animator.SetBool("Side", true);
             _offset += Vector3.left;
             transform.localScale = new(-1, 1, 1);
         }
         if (Input.GetKey(KeyCode.D))
         {
+            offset += Vector3.right * speed * Time.deltaTime;
+            transform.rotation = new Quaternion(0, 180, 0, 0);
+            animator.SetBool("Up", false);
+            animator.SetBool("Down", false);
+            animator.SetBool("Side", true);
             _offset += Vector3.right;
             transform.localScale = new(1, 1, 1);
         }
         if (Input.GetKey(KeyCode.S))
         {
+            offset += Vector3.down * speed * Time.deltaTime;
+            transform.rotation = new Quaternion();
+            animator.SetBool("Up", true);
+            animator.SetBool("Down", true);
+            animator.SetBool("Side", false);
+        }
+
+        if (Input.GetKeyUp(KeyCode.A) || Input.GetKeyUp(KeyCode.D) || Input.GetKeyUp(KeyCode.W) ||
+            Input.GetKeyUp(KeyCode.S))
+        {
+            animator.SetBool("Up", false);
+            animator.SetBool("Down", false);
+            animator.SetBool("Side", false);
             _offset += Vector3.down;
             transform.localScale = new(1, 1, 1);
         }
