@@ -5,6 +5,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using UnityEngine.Video;
 
 public class UIManager : MonoBehaviour
 {
@@ -14,6 +15,7 @@ public class UIManager : MonoBehaviour
     [SerializeField] private GameObject gameOverPanel;
     [SerializeField] private Button gameOverButtonYes;
     [SerializeField] private Button gameOverButtonNo;
+    [SerializeField] private VideoPlayer gameoverVideo;
 
     private int m_score;
     public int getScore => m_score;
@@ -47,5 +49,16 @@ public class UIManager : MonoBehaviour
         scoreTxt.text = m_score.ToString();
     }
 
-    public void GameOver() => gameOverPanel.SetActive(true);
+    public void GameOver()
+    {
+        StartCoroutine(GameoverCoroutine());
+    }
+
+    IEnumerator GameoverCoroutine()
+    {
+        gameoverVideo.Play();
+        yield return new WaitForSeconds(7.0f);
+        gameoverVideo.enabled = false;
+        gameOverPanel.SetActive(true);
+    }
 }

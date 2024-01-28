@@ -348,6 +348,7 @@ GameObject:
   - component: {fileID: 2248686458688307302}
   - component: {fileID: 3826354215720414622}
   - component: {fileID: 8133421876998281059}
+  - component: {fileID: 2520892270203129576}
   m_Layer: 8
   m_Name: Customer
   m_TagString: Untagged
@@ -465,6 +466,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!210 &2520892270203129576
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6855240993665694737}
+  m_Enabled: 1
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 1
+  m_SortAtRoot: 0
 --- !u!1 &7813622463302651362
 GameObject:
   m_ObjectHideFlags: 0
