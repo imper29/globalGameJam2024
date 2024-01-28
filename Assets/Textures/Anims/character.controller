@@ -447,9 +447,6 @@ AnimatorStateTransition:
   - m_ConditionMode: 6
     m_ConditionEvent: Stage
     m_EventTreshold: 1
-  - m_ConditionMode: 2
-    m_ConditionEvent: Transition1Done
-    m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 3371106237050439359}
   m_Solo: 0
@@ -2406,9 +2403,6 @@ AnimatorStateTransition:
   - m_ConditionMode: 6
     m_ConditionEvent: Stage
     m_EventTreshold: 2
-  - m_ConditionMode: 2
-    m_ConditionEvent: Transition2Done
-    m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 614258954237502546}
   m_Solo: 0
