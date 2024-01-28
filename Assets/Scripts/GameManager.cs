@@ -16,6 +16,13 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     private AnimationCurve m_EasingCurve;
 
+    [SerializeField]
+    private TMPro.TextMeshProUGUI m_ScoreRenderer;
+    [SerializeField]
+    private SpriteRenderer m_HealthRenderer;
+    [SerializeField]
+    private Sprite[] m_HealthSprites;
+
     private void Awake()
     {
         s_Instance = this;

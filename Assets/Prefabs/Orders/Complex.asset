@@ -13,87 +13,87 @@ MonoBehaviour:
   m_Name: Complex
   m_EditorClassIdentifier: 
   m_Orders:
-  - m_Weight: 0
+  - m_Weight: 1
     m_DifficultyMin: 0
     m_DifficultyMax: 1
     m_Organs: 9
     m_Pool: {fileID: 0}
-  - m_Weight: 0
+  - m_Weight: 1
     m_DifficultyMin: -0.03
     m_DifficultyMax: 1
     m_Organs: 17
     m_Pool: {fileID: 0}
-  - m_Weight: 0
+  - m_Weight: 1
     m_DifficultyMin: 0
     m_DifficultyMax: 1
     m_Organs: 65
     m_Pool: {fileID: 0}
-  - m_Weight: 0
+  - m_Weight: 1
     m_DifficultyMin: 0
     m_DifficultyMax: 1
     m_Organs: 129
     m_Pool: {fileID: 0}
-  - m_Weight: 0
+  - m_Weight: 1
     m_DifficultyMin: 0
     m_DifficultyMax: 1
     m_Organs: 257
     m_Pool: {fileID: 0}
-  - m_Weight: 0
+  - m_Weight: 1
     m_DifficultyMin: 0
     m_DifficultyMax: 1
     m_Organs: 10
     m_Pool: {fileID: 0}
-  - m_Weight: 0
+  - m_Weight: 1
     m_DifficultyMin: 0
     m_DifficultyMax: 1
     m_Organs: 18
     m_Pool: {fileID: 0}
-  - m_Weight: 0
+  - m_Weight: 1
     m_DifficultyMin: 0
     m_DifficultyMax: 1
     m_Organs: 66
     m_Pool: {fileID: 0}
-  - m_Weight: 0
+  - m_Weight: 1
     m_DifficultyMin: 0
     m_DifficultyMax: 1
     m_Organs: 130
     m_Pool: {fileID: 0}
-  - m_Weight: 0
+  - m_Weight: 1
     m_DifficultyMin: 0
     m_DifficultyMax: 1
     m_Organs: 258
     m_Pool: {fileID: 0}
-  - m_Weight: 0
+  - m_Weight: 1
     m_DifficultyMin: 0
     m_DifficultyMax: 1
     m_Organs: 12
     m_Pool: {fileID: 0}
-  - m_Weight: 0
+  - m_Weight: 1
     m_DifficultyMin: 0
     m_DifficultyMax: 1
     m_Organs: 20
     m_Pool: {fileID: 0}
-  - m_Weight: 0
+  - m_Weight: 1
     m_DifficultyMin: 0
     m_DifficultyMax: 1
     m_Organs: 68
     m_Pool: {fileID: 0}
-  - m_Weight: 0
+  - m_Weight: 1
     m_DifficultyMin: 0
     m_DifficultyMax: 1
     m_Organs: 132
     m_Pool: {fileID: 0}
-  - m_Weight: 0
+  - m_Weight: 1
     m_DifficultyMin: 0
     m_DifficultyMax: 1
     m_Organs: 260
     m_Pool: {fileID: 0}
-  - m_Weight: 0
+  - m_Weight: 1
     m_DifficultyMin: 0
     m_DifficultyMax: 1
     m_Organs: 40
     m_Pool: {fileID: 0}
-  - m_Weight: 0
+  - m_Weight: 1
     m_DifficultyMin: 0
     m_DifficultyMax: 1
     m_Organs: 48
@@ -103,12 +103,12 @@ MonoBehaviour:
     m_DifficultyMax: 1
     m_Organs: 96
     m_Pool: {fileID: 0}
-  - m_Weight: 0
+  - m_Weight: 1
     m_DifficultyMin: 0
     m_DifficultyMax: 1
     m_Organs: 160
     m_Pool: {fileID: 0}
-  - m_Weight: 0
+  - m_Weight: 1
     m_DifficultyMin: 0
     m_DifficultyMax: 1
     m_Organs: 288

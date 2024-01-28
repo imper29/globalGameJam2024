@@ -20,15 +20,15 @@ public class CustomerOrderPool : ScriptableObject
         var orders = GetOptions(m_Orders, difficulty).OrderByDescending(o => o.Weight).ToArray();
         var weight = orders.Sum(o => o.Weight);
         var rand = Random.Range(0.0f, weight);
-        for (int i = 0; i < 0; ++i)
+        for (int i = 0; i < orders.Length; ++i)
         {
-            if (rand >= orders[i].Weight)
+            if (rand <= orders[i].Weight)
                 return orders[i];
             rand -= orders[i].Weight;
         }
         return orders[orders.Length - 1];
         
-        static IEnumerable<CustomerOrder> GetOptions(CustomerOrder[] orders, float difficulty)
+        static IEnumerable<CustomerOrder> GetOptions(CustomerOrder[] orders, float difficulty, float weight = 1.0f)
         {
             IEnumerable<CustomerOrder> results = Enumerable.Empty<CustomerOrder>();
             foreach (var order in orders)
@@ -36,9 +36,13 @@ public class CustomerOrderPool : ScriptableObject
                 if (order.DifficultyMin <= difficulty && order.DifficultyMax >= difficulty)
                 {
                     if (order.Pool)
-                        results = results.Concat(GetOptions(order.Pool.Orders, difficulty));
+                        results = results.Concat(GetOptions(order.Pool.Orders, difficulty, weight * order.Weight));
                     else
-                        results = results.Append(order);
+                    {
+                        var o = order;
+                        o.Weight *= weight;
+                        results = results.Append(o);
+                    }
                 }
             }
             return results;
@@ -54,7 +58,11 @@ public class CustomerOrderPool : ScriptableObject
         /// <summary>
         /// The weight.
         /// </summary>
-        public readonly float Weight => m_Weight;
+        public float Weight
+        {
+            get => m_Weight;
+            set => m_Weight = value;
+        }
         /// <summary>
         /// The minimum difficulty.
         /// </summary>

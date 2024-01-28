@@ -13,37 +13,37 @@ MonoBehaviour:
   m_Name: Basic
   m_EditorClassIdentifier: 
   m_Orders:
-  - m_Weight: 0
+  - m_Weight: 1
     m_DifficultyMin: 0
     m_DifficultyMax: 1
     m_Organs: 1
     m_Pool: {fileID: 0}
-  - m_Weight: 0
+  - m_Weight: 1
     m_DifficultyMin: 0
     m_DifficultyMax: 1
     m_Organs: 2
     m_Pool: {fileID: 0}
-  - m_Weight: 0
+  - m_Weight: 1
     m_DifficultyMin: 0
     m_DifficultyMax: 1
     m_Organs: 4
     m_Pool: {fileID: 0}
-  - m_Weight: 0
+  - m_Weight: 1
     m_DifficultyMin: 0
     m_DifficultyMax: 1
     m_Organs: 8
     m_Pool: {fileID: 0}
-  - m_Weight: 0
+  - m_Weight: 1
     m_DifficultyMin: 0
     m_DifficultyMax: 1
     m_Organs: 16
     m_Pool: {fileID: 0}
-  - m_Weight: 0
+  - m_Weight: 1
     m_DifficultyMin: 0
     m_DifficultyMax: 1
     m_Organs: 32
     m_Pool: {fileID: 0}
-  - m_Weight: 0
+  - m_Weight: 1
     m_DifficultyMin: 0
     m_DifficultyMax: 1
     m_Organs: 64
@@ -53,7 +53,7 @@ MonoBehaviour:
     m_DifficultyMax: 1
     m_Organs: 128
     m_Pool: {fileID: 0}
-  - m_Weight: 0
+  - m_Weight: 1
     m_DifficultyMin: 0
     m_DifficultyMax: 1
     m_Organs: 256
