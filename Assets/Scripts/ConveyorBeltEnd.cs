@@ -4,7 +4,7 @@ public class ConveyorBeltEnd : MonoBehaviour
 {
     private OrganManager m_OrganManager;
 
-    private void Awake()
+    private void Start()
     {
         m_OrganManager = FindObjectOfType<OrganManager>();
     }
