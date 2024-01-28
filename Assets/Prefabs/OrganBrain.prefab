@@ -8,9 +8,29 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2424971159777463066, guid: cfb4a80882b2c5d4b8cf05c2dce0a0e5, type: 3}
+      propertyPath: m_Size.x
+      value: 1.0416666
+      objectReference: {fileID: 0}
+    - target: {fileID: 2424971159777463066, guid: cfb4a80882b2c5d4b8cf05c2dce0a0e5, type: 3}
+      propertyPath: m_Size.y
+      value: 1.0416666
+      objectReference: {fileID: 0}
+    - target: {fileID: 2424971159777463066, guid: cfb4a80882b2c5d4b8cf05c2dce0a0e5, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 5ac3aa5e8d9e5564e91b7e003082e5db, type: 3}
+    - target: {fileID: 2424971159777463066, guid: cfb4a80882b2c5d4b8cf05c2dce0a0e5, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3222728921707093945, guid: cfb4a80882b2c5d4b8cf05c2dce0a0e5, type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6091318737796226565, guid: cfb4a80882b2c5d4b8cf05c2dce0a0e5, type: 3}
       propertyPath: m_Name
-      value: Organ Variant
+      value: OrganBrain
       objectReference: {fileID: 0}
     - target: {fileID: 6330928917357936594, guid: cfb4a80882b2c5d4b8cf05c2dce0a0e5, type: 3}
       propertyPath: m_LocalPosition.x

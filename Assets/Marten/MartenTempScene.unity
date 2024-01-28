@@ -785,7 +785,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wantedCurrent: 0
-  wantedOriginal: 66
+  wantedOriginal: 65
   tbl: {fileID: 11400000, guid: 504f7fe7db859f94ea42f0f954975f79, type: 2}
 --- !u!212 &1367788997
 SpriteRenderer:
@@ -828,7 +828,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -648239443, guid: 47a03d0e13fb8824892d9d8edc761de1, type: 3}
+  m_Sprite: {fileID: 1928957073, guid: a5bc1c9faa4932f40a591367dcc2d452, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

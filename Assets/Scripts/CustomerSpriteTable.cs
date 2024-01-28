@@ -4,12 +4,20 @@ using UnityEngine;
 public class CustomerSpriteTable : ScriptableObject
 {
     [SerializeField]
+    private Sprite[] m_Organs;
+    [SerializeField]
     private Sprite[] m_WantedExternal;
     [SerializeField]
     private Sprite[] m_WantedInternal;
     [SerializeField]
     private Sprite[] m_WantedInternalExternal;
-
+    
+    public Sprite GetSprite(OrganType organ)
+    {
+        if (organ == OrganType.None)
+            return null;
+        return m_Organs[(int)organ];
+    }
     public Sprite GetSprite(OrganMask wantedCurrent, OrganMask wantedOriginal)
     {
         OrganType wantedInternal = GetInternalOrgan(wantedOriginal);
@@ -49,7 +57,7 @@ public class CustomerSpriteTable : ScriptableObject
         }
     }
 
-    static OrganType GetInternalOrgan(OrganMask mask)
+    public static OrganType GetInternalOrgan(OrganMask mask)
     {
         mask &= OrganMask.Internal;
         switch (mask)
@@ -68,7 +76,7 @@ public class CustomerSpriteTable : ScriptableObject
                 return OrganType.None;
         }
     }
-    static OrganType GetExternalOrgan(OrganMask mask)
+    public static OrganType GetExternalOrgan(OrganMask mask)
     {
         mask &= OrganMask.External;
         switch (mask)
@@ -87,15 +95,16 @@ public class CustomerSpriteTable : ScriptableObject
                 return OrganType.None;
         }
     }
-    static int GetInternalOrganSpriteIndex(OrganType wanted, bool wants)
+
+    public static int GetInternalOrganSpriteIndex(OrganType wanted, bool wants)
     {
         return wants ? 0 : 1;
     }
-    static int GetInternalOrganSpriteCount()
+    public static int GetInternalOrganSpriteCount()
     {
         return 2;
     }
-    static int GetExternalOrganSpriteIndex(OrganType wanted, bool wants)
+    public static int GetExternalOrganSpriteIndex(OrganType wanted, bool wants)
     {
         int offset = wants ? 0 : 1;
         switch (wanted)
@@ -113,7 +122,7 @@ public class CustomerSpriteTable : ScriptableObject
                 return 8 + offset;
         }
     }
-    static int GetExternalOrganSpriteCount()
+    public static int GetExternalOrganSpriteCount()
     {
         return 10;
     }

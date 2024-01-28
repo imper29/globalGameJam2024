@@ -12,6 +12,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2bfadce170fc75d498c18d5a17567b8a, type: 3}
   m_Name: CustomSpriteTable
   m_EditorClassIdentifier: 
+  m_Organs:
+  - {fileID: 21300000, guid: 5ac3aa5e8d9e5564e91b7e003082e5db, type: 3}
+  - {fileID: 21300000, guid: 76f7c9c0d75200c47aff4a7b034a1d10, type: 3}
+  - {fileID: 21300000, guid: 9632b137b49209542aec2af295822bf3, type: 3}
+  - {fileID: 21300000, guid: d8b10ac6705b3624b9e22fb1a34d14cf, type: 3}
+  - {fileID: 21300000, guid: f55a2e47648022e4f871045627f44802, type: 3}
+  - {fileID: 21300000, guid: e8a48aa422204284b985c6b419c3b1c1, type: 3}
+  - {fileID: 21300000, guid: 324e3254d4249de47a3e258c54af7043, type: 3}
+  - {fileID: 21300000, guid: 2581e78ae713be3458ad7e56c9d03184, type: 3}
+  - {fileID: 21300000, guid: 2ae9e4b5135dadc48865da92d88a0cca, type: 3}
+  - {fileID: 0}
   m_WantedExternal:
   - {fileID: 842681156, guid: c0478691bbd2e1d46b7a8c2199ec4c92, type: 3}
   - {fileID: 413228426, guid: c0478691bbd2e1d46b7a8c2199ec4c92, type: 3}
@@ -28,7 +39,7 @@ MonoBehaviour:
   - {fileID: 1641644568, guid: c0b9bc0bc9116a341b8a3820893f80f5, type: 3}
   m_WantedInternalExternal:
   - {fileID: 313314817, guid: f244e03175559e343895301c282e22da, type: 3}
-  - {fileID: -754989006, guid: f244e03175559e343895301c282e22da, type: 3}
+  - {fileID: -815468737, guid: f244e03175559e343895301c282e22da, type: 3}
   - {fileID: -1417925435, guid: a5bc1c9faa4932f40a591367dcc2d452, type: 3}
   - {fileID: -560909093, guid: a5bc1c9faa4932f40a591367dcc2d452, type: 3}
   - {fileID: 0}
@@ -37,7 +48,7 @@ MonoBehaviour:
   - {fileID: 429188611, guid: 05bfa7801bb35994c984d525b748cada, type: 3}
   - {fileID: -2030949211, guid: 47a03d0e13fb8824892d9d8edc761de1, type: 3}
   - {fileID: 1660105233, guid: 47a03d0e13fb8824892d9d8edc761de1, type: 3}
-  - {fileID: -815468737, guid: f244e03175559e343895301c282e22da, type: 3}
+  - {fileID: -754989006, guid: f244e03175559e343895301c282e22da, type: 3}
   - {fileID: 273579149, guid: f244e03175559e343895301c282e22da, type: 3}
   - {fileID: 1776166614, guid: a5bc1c9faa4932f40a591367dcc2d452, type: 3}
   - {fileID: 1928957073, guid: a5bc1c9faa4932f40a591367dcc2d452, type: 3}
