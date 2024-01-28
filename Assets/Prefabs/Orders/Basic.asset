@@ -1,0 +1,60 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cdaf36dc995212746b8273bf7ea3c053, type: 3}
+  m_Name: Basic
+  m_EditorClassIdentifier: 
+  m_Orders:
+  - m_Weight: 0
+    m_DifficultyMin: 0
+    m_DifficultyMax: 1
+    m_Organs: 1
+    m_Pool: {fileID: 0}
+  - m_Weight: 0
+    m_DifficultyMin: 0
+    m_DifficultyMax: 1
+    m_Organs: 2
+    m_Pool: {fileID: 0}
+  - m_Weight: 0
+    m_DifficultyMin: 0
+    m_DifficultyMax: 1
+    m_Organs: 4
+    m_Pool: {fileID: 0}
+  - m_Weight: 0
+    m_DifficultyMin: 0
+    m_DifficultyMax: 1
+    m_Organs: 8
+    m_Pool: {fileID: 0}
+  - m_Weight: 0
+    m_DifficultyMin: 0
+    m_DifficultyMax: 1
+    m_Organs: 16
+    m_Pool: {fileID: 0}
+  - m_Weight: 0
+    m_DifficultyMin: 0
+    m_DifficultyMax: 1
+    m_Organs: 32
+    m_Pool: {fileID: 0}
+  - m_Weight: 0
+    m_DifficultyMin: 0
+    m_DifficultyMax: 1
+    m_Organs: 64
+    m_Pool: {fileID: 0}
+  - m_Weight: 0
+    m_DifficultyMin: 0
+    m_DifficultyMax: 1
+    m_Organs: 128
+    m_Pool: {fileID: 0}
+  - m_Weight: 0
+    m_DifficultyMin: 0
+    m_DifficultyMax: 1
+    m_Organs: 256
+    m_Pool: {fileID: 0}

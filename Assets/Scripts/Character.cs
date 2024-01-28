@@ -5,9 +5,10 @@ public class Character : MonoBehaviour
 {
     [SerializeField] private Rigidbody2D Rigidbody2D;
     [SerializeField] private Animator animator;
-    [SerializeField] private float speed;
     [SerializeField] private GameObject[] organHolder;
     [SerializeField] private float pickingRange;
+    [SerializeField] private float speedMin;
+    [SerializeField] private float speedMax;
     private int _messedUp;
     private bool _hasAnOrgan;
     private Organ _carryingOrgan;
@@ -19,22 +20,22 @@ public class Character : MonoBehaviour
         _offset = Vector3.zero;
         if (Input.GetKey(KeyCode.W))
         {
-            _offset += Vector3.up * speed;
+            _offset += Vector3.up;
             transform.localScale = new(1, 1, 1);
         }
         if (Input.GetKey(KeyCode.A))
         {
-            _offset += Vector3.left * speed;
+            _offset += Vector3.left;
             transform.localScale = new(-1, 1, 1);
         }
         if (Input.GetKey(KeyCode.D))
         {
-            _offset += Vector3.right * speed;
+            _offset += Vector3.right;
             transform.localScale = new(1, 1, 1);
         }
         if (Input.GetKey(KeyCode.S))
         {
-            _offset += Vector3.down * speed;
+            _offset += Vector3.down;
             transform.localScale = new(1, 1, 1);
         }
         if (Input.GetKeyDown(KeyCode.Space))
@@ -45,7 +46,7 @@ public class Character : MonoBehaviour
     }
     private void FixedUpdate()
     {
-        Rigidbody2D.MovePosition(transform.position + _offset * Time.fixedDeltaTime);
+        Rigidbody2D.MovePosition(transform.position + _offset * GetSpeed() * Time.fixedDeltaTime);
 
         //Debug
         Debug.DrawLine(new Vector3(transform.position.x, transform.position.y - 2.9f, 0),
@@ -126,5 +127,10 @@ public class Character : MonoBehaviour
         {
             //GameOver
         }
+    }
+
+    private float GetSpeed()
+    {
+        return Mathf.Lerp(speedMin, speedMax, GameManager.Instance.GetDifficulty());
     }
 }

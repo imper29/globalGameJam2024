@@ -5,14 +5,12 @@ public class Customer : MonoBehaviour
     public OrganMask WantedOrgans => m_WantedOrgans;
     public OrganMask WantedOrgansOriginal => m_WantedOrgansOriginal;
 
-    private void Awake()
+    public void Initialize(OrganMask order)
     {
-        var order = s_Orders[Random.Range(0, s_Orders.Length)];
         m_WantedOrgans = order;
         m_WantedOrgansOriginal = order;
         RefreshSprites();
     }
-
     public void ImplantOrgan(Organ organ)
     {
         OrganMask mask = (OrganMask)(1 << (int)organ.Type);
