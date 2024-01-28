@@ -5,7 +5,7 @@ public class Character : MonoBehaviour
 {
     [SerializeField] private Rigidbody2D Rigidbody2D;
     [SerializeField] private Animator animator;
-    [SerializeField] private GameObject[] organHolder;
+    [SerializeField] private GameObject organHolder;
     [SerializeField] private float pickingRange;
     [SerializeField] private float speedMin;
     [SerializeField] private float speedMax;
@@ -17,6 +17,8 @@ public class Character : MonoBehaviour
 
     private void Update()
     {
+        if (Input.GetKeyDown(KeyCode.L))
+            PlayerMessedUp();
         _offset = Vector3.zero;
         if (Input.GetKey(KeyCode.W))
         {
@@ -100,14 +102,14 @@ public class Character : MonoBehaviour
             if (_hasAnOrgan)
             {
                 //Swap Organs
-                organHolder[_messedUp].transform.GetChild(0).transform.position = hit.transform.position;
-                organHolder[_messedUp].transform.GetChild(0).GetComponent<Organ>().isInPlayerHands = false;
-                organHolder[_messedUp].GetComponentInChildren<Organ>().transform.parent = null;
+                organHolder.transform.GetChild(0).transform.position = hit.transform.position;
+                organHolder.transform.GetChild(0).GetComponent<Organ>().isInPlayerHands = false;
+                organHolder.GetComponentInChildren<Organ>().transform.parent = null;
             }
 
             // Pick an Organ
             print(hit.transform.gameObject.name);
-            hit.transform.parent = organHolder[_messedUp].transform;
+            hit.transform.parent = organHolder.transform;
             hit.transform.localPosition = new Vector3();
             hit.transform.gameObject.GetComponent<Organ>().isInPlayerHands = true;
             _hasAnOrgan = true;
@@ -140,8 +142,8 @@ public class Character : MonoBehaviour
 
 
             hit.transform.gameObject.GetComponent<Customer>()
-                .ImplantOrgan(organHolder[_messedUp].transform.GetChild(0).GetComponent<Organ>());
-            Destroy(organHolder[_messedUp].transform.GetChild(0).GetComponent<Organ>().gameObject);
+                .ImplantOrgan(organHolder.transform.GetChild(0).GetComponent<Organ>());
+            Destroy(organHolder.transform.GetChild(0).GetComponent<Organ>().gameObject);
             _hasAnOrgan = false;
         }
     }
@@ -157,6 +159,7 @@ public class Character : MonoBehaviour
         {
             //GameOver
         }
+        animator.SetInteger("Stage", _messedUp);
     }
 
     private float GetSpeed()
