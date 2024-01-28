@@ -3,6 +3,12 @@ using UnityEngine;
 public class Customer : MonoBehaviour
 {
     public OrganMask WantedOrgans => m_WantedOrgans;
+    public OrganMask WantedOrgansOriginal => m_WantedOrgansOriginal;
+
+    private void Awake()
+    {
+        m_WantedOrgansOriginal = m_WantedOrgans;
+    }
 
     public void ImplantOrgan(Organ organ)
     {
@@ -32,4 +38,5 @@ public class Customer : MonoBehaviour
     
     [SerializeField]
     private OrganMask m_WantedOrgans;
+    private OrganMask m_WantedOrgansOriginal;
 }
