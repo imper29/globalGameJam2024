@@ -160,11 +160,13 @@ public class Character : MonoBehaviour
     public void PlayerMessedUp(int messedUpTimes)
     {
         _messedUp = messedUpTimes;
-        if(_messedUp == 1)
-            animator.SetBool("Transition1Done",true);
-        if(_messedUp == 2)
-            animator.SetBool("Transition2Done",true);
         animator.SetInteger("Stage", _messedUp);
+    }
+    public void CompleteAnimationTransition1() {
+        animator.SetBool("Transition1Done", true);
+    }
+    public void CompleteAnimationTransition2() {
+        animator.SetBool("Transition2Done", true);
     }
 
     private float GetSpeed()
